@@ -1,8 +1,8 @@
 <template>
-  <li>
+  <base-card>
     <h3>{{ name }}</h3>
     <div class="role" :class="roleClass">{{ role }}</div>
-  </li>
+  </base-card>
 </template>
 
 <script>
@@ -23,7 +23,14 @@ export default {
 </script>
 
 <style scoped>
+.users{
+  display: flex;
+}
+.column {
+  flex: 1;
+}
 li {
+  list-style: none;
   margin: 1rem 0;
   border: 1px solid #ccc;
   padding: 1rem;
@@ -34,7 +41,6 @@ h3 {
 }
 
 .role {
-  border-radius: 40px;
   background-color: #ccc;
   color: #252525;
   padding: 0.25rem 1rem;
@@ -42,12 +48,12 @@ h3 {
 }
 
 .role--engineer {
-  background-color: blue;
-  color: white;
+  background-color: #c8c8ff;
+  color: black;
 }
 
 .role--consultant {
-  background-color: #af003a;
-  color: white;
+  background-color: #ffb6cf;
+  color: black;
 }
 </style>

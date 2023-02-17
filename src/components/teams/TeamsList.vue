@@ -1,4 +1,8 @@
 <template>
+  <router-link to="/addTeam">
+    <base-button>Add Team</base-button>
+  </router-link>
+  <router-view></router-view>
   <ul>
     <teams-item
       v-for="team in teams"
